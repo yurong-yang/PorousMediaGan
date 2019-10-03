@@ -75,4 +75,4 @@ fixed_noise = Variable(fixed_noise)
 
 fake = netG(fixed_noise)
 
-save_hdf5(fake.data, '{0}/{1}_{2}.hdf5'.format(opt.experiment, opt.experiment, seed))
+save_hdf5(fake.data, '{0}/{1}_{2}.hdf5'.format(opt.experiment, opt.experiment, opt.seed))
