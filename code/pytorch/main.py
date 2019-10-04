@@ -180,7 +180,7 @@ for epoch in range(opt.niter):
 
         print('[%d/%d][%d/%d] Loss_D: %.4f Loss_G: %.4f D(x): %.4f D(G(z)): %.4f / %.4f'
               % (epoch, opt.niter, i, len(dataloader),
-                 errD.item()[0], errG.item()[0], D_x, D_G_z1, D_G_z2))
+                 errD, errG, D_x, D_G_z1, D_G_z2))
         f.write('[%d/%d][%d/%d] Loss_D: %.4f Loss_G: %.4f D(x): %.4f D(G(z)): %.4f / %.4f'
               % (epoch, opt.niter, i, len(dataloader),
                  errD.data[0], errG.data[0], D_x, D_G_z1, D_G_z2))
