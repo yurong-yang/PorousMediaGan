@@ -59,9 +59,10 @@ def weights_init(m):
         m.weight.data.normal_(1.0, 0.02)
         m.bias.data.fill_(0)
 
+
 netG = dcgan.DCGAN3D_G(opt.imageSize, nz, nc, ngf, ngpu)
 netG.apply(weights_init)
-if opt.netG != '': # load checkpoint if needed
+if opt.netG != '':  # load checkpoint if needed
     netG.load_state_dict(torch.load(opt.netG))
 print(netG)
 

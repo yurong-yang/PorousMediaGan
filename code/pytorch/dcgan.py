@@ -52,6 +52,7 @@ class DCGAN3D_D(nn.Container):
         output = nn.parallel.data_parallel(self.main, input, gpu_ids)
         return output.view(-1, 1)
 
+
 class DCGAN3D_G(nn.Container):
     def __init__(self, isize, nz, nc, ngf, ngpu, n_extra_layers=0):
         super(DCGAN3D_G, self).__init__()
